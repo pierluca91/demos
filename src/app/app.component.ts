@@ -13,8 +13,6 @@ export class AppComponent implements OnInit {
   constructor(private anagraficaService: AnagraficaService) {}
 
   ngOnInit(): void {
-    this.anagraficaService.getAllName().subscribe((el) => {
-      console.log(el);
-    });
+    
   }
 }

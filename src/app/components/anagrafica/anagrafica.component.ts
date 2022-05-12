@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { AnagraficaService } from './anagrafica.service';
 
 @Component({
   selector: 'app-anagrafica',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnagraficaComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private anagraficaService:AnagraficaService,
+    private http:HttpClient
+    ) { 
+  }
 
   ngOnInit() {
   }

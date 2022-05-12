@@ -7,9 +7,12 @@ import { HelloComponent } from './hello.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AnagraficaComponent } from './components/anagrafica/anagrafica.component';
 import { AnagraficaService } from './components/anagrafica/anagrafica.service';
+import { RouterModule } from '@angular/router';
 
+import { appRoutes } from './routes';
 @NgModule({
-  imports: [BrowserModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule, RouterModule,RouterModule.forRoot(appRoutes)
+  ],
   declarations: [AppComponent, HelloComponent, AnagraficaComponent],
   providers: [AnagraficaService],
   bootstrap: [AppComponent],
